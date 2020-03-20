@@ -24,6 +24,7 @@ import com.google.actions.api.response.ResponseBuilder;
 import com.google.api.services.actions_fulfillment.v2.model.User;
 
 import java.util.ArrayList;
+import java.util.Map;
 import java.util.Random;
 import java.util.ResourceBundle;
 import java.util.stream.Collectors;
@@ -45,16 +46,42 @@ public class MyActionsApp extends DialogflowApp {
   @ForIntent("Retrieval")
   public ActionResponse retrieveItem(ActionRequest request){
     ResponseBuilder responseBuilder = getResponseBuilder(request);
-    responseBuilder.add((String)request.getParameter("item"));
+
+    if (request.getUser().getUserVerificationStatus().equals("VERIFIED")) {
+      Map<String,Object> storage=responseBuilder.getUserStorage();
+      String item= (String) request.getParameter("item");
+      if(storage.containsKey(item)){
+        responseBuilder.add(String.format("It's in the %s",storage.get(item)));
+
+      }else{
+        responseBuilder.add("I don't know where it is.");
+      }
+
+
+    } else {
+      responseBuilder.add("I'm sorry but the account has not been verified.");
+    }
+
     return responseBuilder.build();
   }
   @ForIntent("Entry")
-  public ActionResponse giveWord(ActionRequest request){
+  public ActionResponse entry(ActionRequest request){
     ResponseBuilder responseBuilder = getResponseBuilder(request);
     String item=(String)request.getParameter("item");
     String location=(String) request.getParameter("area");
-    
+    if (request.getUser().getUserVerificationStatus().equals("VERIFIED")) {
+      responseBuilder.getUserStorage().put(item,location);
+      responseBuilder.add("Stored");
+    } else {
 
+      responseBuilder.add("Sorry lmao");
+    }
+    return responseBuilder.build();
+  }
+  @ForIntent("Clear")
+  public ActionResponse clear(ActionRequest request){
+    ResponseBuilder responseBuilder = getResponseBuilder(request);
+    responseBuilder.getUserStorage().clear();
     return responseBuilder.build();
   }
 

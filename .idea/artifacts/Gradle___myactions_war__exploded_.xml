@@ -1,0 +1,63 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="Gradle : myactions.war (exploded)">
+    <output-path>$PROJECT_DIR$/build/libs/exploded/myactions.war</output-path>
+    <properties id="gradle-properties">
+      <options external-project-path="$PROJECT_DIR$">
+        <manifest>TWFuaWZlc3QtVmVyc2lvbjogMS4wDQoNCg==</manifest>
+      </options>
+    </properties>
+    <root id="root">
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/build/libs/exploded/myactions.war/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="myactions.main/web/Web Gradle : myactions.war" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="myactions.main" />
+          <element id="dir-copy" path="$PROJECT_DIR$/out/production/resources" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Gradle: com.amazonaws:aws-lambda-java-core:1.2.0" />
+          <element id="library" level="project" name="Gradle: com.google.actions:actions-on-google:1.8.0" />
+          <element id="library" level="project" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.3.11" />
+          <element id="library" level="project" name="Gradle: com.googlecode.json-simple:json-simple:1.1.1" />
+          <element id="library" level="project" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.3.11" />
+          <element id="library" level="project" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.3.11" />
+          <element id="library" level="project" name="Gradle: com.google.protobuf:protobuf-java-util:3.6.1" />
+          <element id="library" level="project" name="Gradle: io.grpc:grpc-protobuf:1.15.1" />
+          <element id="library" level="project" name="Gradle: io.grpc:grpc-stub:1.15.1" />
+          <element id="library" level="project" name="Gradle: io.grpc:grpc-auth:1.15.1" />
+          <element id="library" level="project" name="Gradle: io.grpc:grpc-protobuf-lite:1.15.1" />
+          <element id="library" level="project" name="Gradle: io.grpc:grpc-core:1.15.1" />
+          <element id="library" level="project" name="Gradle: com.google.code.gson:gson:2.8.4" />
+          <element id="library" level="project" name="Gradle: com.google.auth:google-auth-library-oauth2-http:0.11.0" />
+          <element id="library" level="project" name="Gradle: com.google.http-client:google-http-client-jackson2:1.24.1" />
+          <element id="library" level="project" name="Gradle: com.google.http-client:google-http-client:1.24.1" />
+          <element id="library" level="project" name="Gradle: org.json:json:20180130" />
+          <element id="library" level="project" name="Gradle: org.slf4j:slf4j-api:1.7.25" />
+          <element id="library" level="project" name="Gradle: commons-lang:commons-lang:2.3" />
+          <element id="library" level="project" name="Gradle: io.grpc:grpc-netty-shaded:1.15.1" />
+          <element id="library" level="project" name="Gradle: junit:junit:4.10" />
+          <element id="library" level="project" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib-common:1.3.11" />
+          <element id="library" level="project" name="Gradle: org.jetbrains:annotations:13.0" />
+          <element id="library" level="project" name="Gradle: com.google.code.findbugs:jsr305:3.0.2" />
+          <element id="library" level="project" name="Gradle: org.apache.httpcomponents:httpclient:4.5.3" />
+          <element id="library" level="project" name="Gradle: com.google.protobuf:protobuf-java:3.6.1" />
+          <element id="library" level="project" name="Gradle: com.google.guava:guava:20.0" />
+          <element id="library" level="project" name="Gradle: com.google.api.grpc:proto-google-common-protos:1.0.0" />
+          <element id="library" level="project" name="Gradle: com.google.auth:google-auth-library-credentials:0.11.0" />
+          <element id="library" level="project" name="Gradle: org.hamcrest:hamcrest-core:1.1" />
+          <element id="library" level="project" name="Gradle: io.grpc:grpc-context:1.15.1" />
+          <element id="library" level="project" name="Gradle: io.opencensus:opencensus-contrib-grpc-metrics:0.12.3" />
+          <element id="library" level="project" name="Gradle: io.opencensus:opencensus-api:0.12.3" />
+          <element id="library" level="project" name="Gradle: com.google.errorprone:error_prone_annotations:2.2.0" />
+          <element id="library" level="project" name="Gradle: org.codehaus.mojo:animal-sniffer-annotations:1.17" />
+          <element id="library" level="project" name="Gradle: com.fasterxml.jackson.core:jackson-core:2.9.2" />
+          <element id="library" level="project" name="Gradle: org.apache.httpcomponents:httpcore:4.4.6" />
+          <element id="library" level="project" name="Gradle: commons-logging:commons-logging:1.2" />
+          <element id="library" level="project" name="Gradle: commons-codec:commons-codec:1.9" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

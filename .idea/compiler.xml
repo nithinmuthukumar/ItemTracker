@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="myactions" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="myactions" target="1.8" />
+      <module name="myactions.main" target="1.8" />
+      <module name="myactions.test" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="HaskellBuildOptions">
+    <ghcPath>$USER_HOME$/.ghcup/bin/ghc</ghcPath>
+    <cabalPath>$USER_HOME$/.ghcup/bin/cabal</cabalPath>
+    <stackPath>/usr/local/bin/stack</stackPath>
+  </component>
+</project>

@@ -48,18 +48,17 @@ public class MyActionsApp extends DialogflowApp {
     ResponseBuilder responseBuilder = getResponseBuilder(request);
 
     if (request.getUser().getUserVerificationStatus().equals("VERIFIED")) {
+
       Map<String,Object> storage=responseBuilder.getUserStorage();
       String item= (String) request.getParameter("item");
       if(storage.containsKey(item)){
         responseBuilder.add(String.format("It's in the %s",storage.get(item)));
-
       }else{
         responseBuilder.add("I don't know where it is.");
       }
-
-
     } else {
       responseBuilder.add("I'm sorry but the account has not been verified.");
+
     }
 
     return responseBuilder.build();
